@@ -7,6 +7,7 @@ https://docs.djangoproject.com/en/1.7/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.7/ref/settings/
 """
+from setting_secret import SECRET_Key, postgrespw
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
@@ -17,7 +18,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ')fos+*8#)o^lhtuywanx2luiz$+0kbd@l$jtov8k!0rg_iq9of'
+#SECRET_KEY = ')fos+*8#)o^lhtuywanx2luiz$+0kbd@l$jtov8k!0rg_iq9of'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -56,12 +57,23 @@ WSGI_APPLICATION = 'mbloc.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
-DATABASES = {
+DATABASES_alt    = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+DATABASE = {
+    'default': {
+        'ENGINE' : 'django.db.backends.postgresql_psycopg2',
+        'NAME' : 'django-mbloc',
+        'USER' : 'django-user',
+        'PASSWORD' : postgrespw,
+        'HOST' : 'localhost',
+        'POST' : ''
+    }
+}
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/

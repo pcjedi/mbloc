@@ -7,7 +7,7 @@ https://docs.djangoproject.com/en/1.7/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.7/ref/settings/
 """
-from setting_secret import SECRET_Key, postgrespw
+from setting_secret import SECRET_KEY, postgrespw
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os

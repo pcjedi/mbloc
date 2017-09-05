@@ -1,2 +1,6 @@
 mbloc/settings_secret.py
+<<<<<<< HEAD
 settings_sec.json
+=======
+.gitignore
+>>>>>>> 9f628724e64b26fac75a411ebd283f90bd334a20

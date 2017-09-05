@@ -9,6 +9,10 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 """
 
 
+<<<<<<< HEAD
+=======
+from setting_secret import SECRET_KEY, postgrespw
+>>>>>>> 9f628724e64b26fac75a411ebd283f90bd334a20
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os

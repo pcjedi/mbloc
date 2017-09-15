@@ -37,6 +37,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
+        'pubs.app.PubsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -63,20 +64,14 @@ WSGI_APPLICATION = 'mbloc.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
-DATABASES_alt    = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-DATABASE = {
+DATABASES = {
     'default': {
         'ENGINE' : 'django.db.backends.postgresql_psycopg2',
-        'NAME' : 'django-mbloc',
-        'USER' : 'django-user',
+        'NAME' : 'djangombloc',
+        'USER' : 'djangouser',
         'PASSWORD' : postgrespw,
         'HOST' : 'localhost',
-        'POST' : ''
+        'PORT' : '2301'
     }
 }
 
